@@ -3,7 +3,7 @@ var rule = require('./fixt/easylistchina+easylist.txt')
 
 var blackhole = "PROXY 127.0.0.1:65535";
 
-let parsedFilterData = {};
+var parsedFilterData = {};
 
 ABPFilterParser.parse(rule, parsedFilterData);
 
@@ -13,7 +13,7 @@ module.exports = function FindProxyForURL(url, host) {
     domain: host,
     elementTypeMaskMap: ABPFilterParser.elementTypes.SCRIPT,
   })){
-    return blackhole + url + host;
+    return blackhole;
   } else {
     return "DIRECT";
   }

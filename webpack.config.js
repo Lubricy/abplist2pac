@@ -8,11 +8,16 @@ module.exports = {
       test: /\.txt$/,
       use: 'raw-loader'
     }]
-  },
-  output: {
+  }
+  , output: {
     filename: 'proxy.pac.js',
     path: path.resolve(__dirname, 'dist'),
     library:"FindProxyForURL",
     libraryTarget:"var"
-  }
+  } 
+   , plugins: [
+     new webpack.optimize.UglifyJsPlugin({
+       minimize : true
+     })
+   ]
 };
