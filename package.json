@@ -1,0 +1,21 @@
+{
+  "name": "abplist2pac",
+  "version": "0.0.1",
+  "description": "convert adblockplus compatitable Easylist to ProxyAutoConfig",
+  "main": "index.js",
+  "scripts": {
+    "install":"./node_modules/.bin/webpack ",
+    "test": "xdg-open test/index.html"
+  },
+  "keywords": [
+    "easylist",
+    "adblock",
+    "pac"
+  ],
+  "author": "Lubricy Fibber <lubricy@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "raw-loader": "^0.5.1",
+    "webpack": "^2.2.1"
+  }
+}
